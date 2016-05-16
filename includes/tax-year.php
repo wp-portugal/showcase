@@ -28,7 +28,7 @@ function taxonomy() {
 	);
 
 	$rewrite = array(
-		'slug'                       => sanitize_title( _x( 'Ano', 'Slug da taxonomia', 'cpwp_showcase' ) ),
+		'slug'                       => sanitize_title( _x( 'Year', 'Taxonomy slug', 'cpwp_showcase' ) ),
 		'with_front'                 => true,
 		'hierarchical'               => false,
 	);
