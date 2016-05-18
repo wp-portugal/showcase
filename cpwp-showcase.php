@@ -15,6 +15,9 @@ namespace CPWP\Showcase\Core\Init;
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
+define( 'CPWP_SHOWCASE_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+define( 'CPWP_SHOWCASE_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
+
 // Register plugin textdomain
 function load_textdomain() {
 	load_plugin_textdomain( 'cpwp_showcase', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
@@ -27,7 +30,7 @@ function boot() {
 	];
 
 	foreach ( $boot_sequence as $path ) {
-		$includes = glob( trailingslashit( plugin_dir_path( __FILE__ ) ) . $path );
+		$includes = glob( CPWP_SHOWCASE_PATH . $path );
 
 		foreach ( $includes as $entry ) {
 			include_once( $entry );
