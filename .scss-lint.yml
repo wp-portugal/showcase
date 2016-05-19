@@ -1,0 +1,36 @@
+linters:
+    Comment:
+        enabled: false
+
+    IdSelector:
+        enabled: false
+
+    ImportantRule:
+        enabled: false
+
+    Indentation:
+        enabled: true
+        allow_non_nested_indentation: false
+        character: tab
+        width: 1
+
+    NestingDepth:
+        enabled: true
+        max_depth: 5
+
+    PropertySortOrder:
+        enabled: true
+        ignore_unspecified: false
+        min_properties: 2
+        separate_groups: false
+        order: concentric
+
+    QualifyingElement:
+        enabled: true
+        allow_element_with_attribute: true
+        allow_element_with_class: false
+        allow_element_with_id: true
+
+    SelectorDepth:
+        enabled: true
+        max_depth: 4
