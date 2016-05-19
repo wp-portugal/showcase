@@ -7,12 +7,11 @@ var gulp = require('gulp'),
 
 // A single variable to hold all the paths
 var paths = {
-	'front_scripts' : ['./assets/javascript/front/*.js', '!./assets/javascript/front/*.min.js', '!./**/build.js'],
 	'admin_scripts' : ['./assets/javascript/admin/*.js', '!./assets/javascript/admin/*.min.js', '!./**/build.js'],
-	'styles'        : ['./assets/styles/**/*.scss'],
+	'front_scripts' : ['./assets/javascript/front/*.js', '!./assets/javascript/front/*.min.js', '!./**/build.js'],
+	'admin_styles'  : ['./assets/styles/admin/**/*.scss'],
+	'front_styles'  : ['./assets/styles/front/**/*.scss']
 };
-
-var runTimestamp = Math.round(Date.now()/1000);
 
 // Combine and minify scripts
 gulp.task('front_scripts', function() {
@@ -61,9 +60,9 @@ gulp.task('admin_scripts', function() {
 });
 
 // Compile and minify scss files
-gulp.task('styles', function() {
+gulp.task('admin_styles', function() {
 	'use strict';
-	return gulp.src(paths.styles)
+	return gulp.src(paths.admin_styles)
 		.pipe(plugins.plumber(
 			function(err) {
 				plugins.gutil.log(plugins.gutil.colors.red( 'Error on ' + err.plugin + '\n' + err.messageFormatted ) );
@@ -73,12 +72,36 @@ gulp.task('styles', function() {
 		))
 		.pipe(plugins.sass())
 		.pipe(plugins.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-		.pipe(gulp.dest('./dist/styles'))
+		.pipe(gulp.dest('./dist/styles/admin'))
 		.pipe(plugins.rename({
 			'suffix' : '.min'
 		}))
 		.pipe(plugins.cleanCss())
-		.pipe(gulp.dest('./dist/styles'))
+		.pipe(gulp.dest('./dist/styles/admin'))
+		.pipe(plugins.notify({
+			'message' : 'Styles updated',
+			'onLast'  : true
+		}));
+});
+
+gulp.task('front_styles', function() {
+	'use strict';
+	return gulp.src(paths.front_styles)
+		.pipe(plugins.plumber(
+			function(err) {
+				plugins.gutil.log(plugins.gutil.colors.red( 'Error on ' + err.plugin + '\n' + err.messageFormatted ) );
+				plugins.gutil.beep();
+				this.emit('end');
+			}
+		))
+		.pipe(plugins.sass())
+		.pipe(plugins.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+		.pipe(gulp.dest('./dist/styles/front'))
+		.pipe(plugins.rename({
+			'suffix' : '.min'
+		}))
+		.pipe(plugins.cleanCss())
+		.pipe(gulp.dest('./dist/styles/front'))
 		.pipe(plugins.notify({
 			'message' : 'Styles updated',
 			'onLast'  : true
@@ -88,9 +111,10 @@ gulp.task('styles', function() {
 // Live update these files
 gulp.task('watch', function() {
 	'use strict';
-	gulp.watch(paths.scripts, ['front_scripts']);
 	gulp.watch(paths.admin_scripts, ['admin_scripts']);
-	gulp.watch(paths.styles, ['styles']);
+	gulp.watch(paths.front_scripts, ['front_scripts']);
+	gulp.watch(paths.admin_styles, ['admin_styles']);
+	gulp.watch(paths.front_styles, ['front_styles']);
 
 	plugins.livereload.listen();
 
@@ -98,8 +122,9 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', [
-	'front_scripts',
 	'admin_scripts',
-	'styles',
+	'front_scripts',
+	'admin_styles',
+	'front_styles',
 	'watch'
 ]);
