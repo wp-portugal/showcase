@@ -7,11 +7,11 @@ namespace CPWP\Showcase\Enqueue\Scripts;
  */
 function front_script() {
 	$scripts = glob( implode( DIRECTORY_SEPARATOR, array(
-				untrailingslashit( CPWP_SHOWCASE_PATH ),
-				'dist',
-				'javascript',
-				'front',
-				'*.js',
+		untrailingslashit( CPWP_SHOWCASE_PATH ),
+		'dist',
+		'javascript',
+		'front',
+		'*.js',
 	) ) );
 	enqueue_scripts( $scripts );
 }
@@ -22,11 +22,11 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\front_script' );
  */
 function admin_script() {
 	$scripts = glob( implode( DIRECTORY_SEPARATOR, array(
-				untrailingslashit( CPWP_SHOWCASE_PATH ),
-				'dist',
-				'javascript',
-				'admin',
-				'*.js',
+		untrailingslashit( CPWP_SHOWCASE_PATH ),
+		'dist',
+		'javascript',
+		'admin',
+		'*.js',
 	) ) );
 	enqueue_scripts( $scripts );
 }
@@ -43,8 +43,9 @@ function admin_localization( $strings, $handle ) {
 		return $strings;
 	}
 
-	return array_merge( $strings, array(
-			'name'         => 'cpwp_admin_localization',
+	return array_merge( $strings,
+		array(
+			'name'         => 'cpwpAdminLocalization',
 			'localization' => array(
 				'title'  => __( 'Choose or Upload an Image', 'cpwp_showcase' ),
 				'button' => __( 'Use this image', 'cpwp_showcase' ),
