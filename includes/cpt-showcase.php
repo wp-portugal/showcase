@@ -45,6 +45,13 @@ function custom_post_type() {
 		'cpwp_year'
 	);
 
+	$rewrite = array(
+		'slug'			=> 'showcase',
+		'with_front'	=> true,
+		'pages'			=> true,
+		'feeds'			=> true,
+	);
+
 	$args = array(
 		'label'                 => __( 'Website', 'cpwp_showcase' ),
 		'description'           => __( 'Website Showcase', 'cpwp_showcase' ),
@@ -60,9 +67,10 @@ function custom_post_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => 'slug',
+		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
+		'rewrite'				=> $rewrite,
 		'capability_type'       => 'page',
 	);
 	register_post_type( 'cpwp_showcase', $args );
