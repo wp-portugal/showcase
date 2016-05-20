@@ -22,7 +22,7 @@ define( 'CPWP_SHOWCASE_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 function load_textdomain() {
 	load_plugin_textdomain( 'cpwp_showcase', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
-add_action( 'admin_init', __NAMESPACE__ . '\load_textdomain' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\load_textdomain' );
 
 function boot() {
 	$boot_sequence = [
