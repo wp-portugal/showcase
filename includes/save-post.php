@@ -8,6 +8,11 @@ function save_post( $post_id ) {
 		return;
 	}
 
+	// Prevent save on autosave
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
+
 	// Check the user's permissions.
 	if ( ! current_user_can( 'edit_post', $post_id ) ) {
 		return;
