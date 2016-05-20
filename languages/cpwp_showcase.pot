@@ -1,0 +1,211 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Showcase\n"
+"POT-Creation-Date: 2016-05-20 00:28+0100\n"
+"PO-Revision-Date: 2016-05-20 00:26+0100\n"
+"Last-Translator: Neolab <webmaster@neolab.no>\n"
+"Language-Team: Neolab <webmaster@neolab.no>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: cpwp-showcase.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/cpt-showcase.php:10
+msgctxt "Post Type General Name"
+msgid "Showcase"
+msgstr ""
+
+#: includes/cpt-showcase.php:11
+msgctxt "Post Type Singular Name"
+msgid "Website"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: includes/cpt-showcase.php:12 includes/cpt-showcase.php:13
+msgid "Showcase"
+msgstr ""
+
+#: includes/cpt-showcase.php:14
+msgid "Item Archives"
+msgstr ""
+
+#: includes/cpt-showcase.php:15 includes/tax-year.php:13
+msgid "All Items"
+msgstr ""
+
+#: includes/cpt-showcase.php:16 includes/tax-year.php:15
+msgid "Add New Item"
+msgstr ""
+
+#: includes/cpt-showcase.php:17
+msgid "Add New"
+msgstr ""
+
+#: includes/cpt-showcase.php:18
+msgid "New Item"
+msgstr ""
+
+#: includes/cpt-showcase.php:19 includes/tax-year.php:16
+msgid "Edit Item"
+msgstr ""
+
+#: includes/cpt-showcase.php:20 includes/tax-year.php:17
+msgid "Update Item"
+msgstr ""
+
+#: includes/cpt-showcase.php:21 includes/tax-year.php:18
+msgid "View Item"
+msgstr ""
+
+#: includes/cpt-showcase.php:22
+msgid "Search Item"
+msgstr ""
+
+#: includes/cpt-showcase.php:23
+msgid "Not found"
+msgstr ""
+
+#: includes/cpt-showcase.php:24
+msgid "Not found in Trash"
+msgstr ""
+
+#: includes/cpt-showcase.php:25
+msgid "Featured Image"
+msgstr ""
+
+#: includes/cpt-showcase.php:26
+msgid "Set featured image"
+msgstr ""
+
+#: includes/cpt-showcase.php:27
+msgid "Remove featured image"
+msgstr ""
+
+#: includes/cpt-showcase.php:28
+msgid "Use as featured image"
+msgstr ""
+
+#: includes/cpt-showcase.php:29
+msgid "Insert into item"
+msgstr ""
+
+#: includes/cpt-showcase.php:30
+msgid "Uploaded to this item"
+msgstr ""
+
+#: includes/cpt-showcase.php:31 includes/tax-year.php:26
+msgid "Items list"
+msgstr ""
+
+#: includes/cpt-showcase.php:32 includes/tax-year.php:27
+msgid "Items list navigation"
+msgstr ""
+
+#: includes/cpt-showcase.php:33
+msgid "Filter items list"
+msgstr ""
+
+#: includes/cpt-showcase.php:49
+msgid "Website"
+msgstr ""
+
+#: includes/cpt-showcase.php:50
+msgid "Website Showcase"
+msgstr ""
+
+#: includes/enqueue-scripts.php:50 includes/meta-fields.php:33
+msgid "Choose or Upload an Image"
+msgstr ""
+
+#: includes/enqueue-scripts.php:51
+msgid "Use this image"
+msgstr ""
+
+#: includes/meta-boxes.php:12
+msgid "Details"
+msgstr ""
+
+#: includes/meta-fields.php:24
+msgid "URL"
+msgstr ""
+
+#: includes/meta-fields.php:24 includes/meta-fields.php:29
+msgid "Required"
+msgstr ""
+
+#: includes/meta-fields.php:29
+msgid "Screenshot"
+msgstr ""
+
+#: includes/tax-year.php:10
+msgctxt "Taxonomy General Name"
+msgid "Years"
+msgstr ""
+
+#: includes/tax-year.php:11
+msgctxt "Taxonomy Singular Name"
+msgid "Year"
+msgstr ""
+
+#: includes/tax-year.php:12
+msgid "Years"
+msgstr ""
+
+#: includes/tax-year.php:14
+msgid "New Item Name"
+msgstr ""
+
+#: includes/tax-year.php:19
+msgid "Separate items with commas"
+msgstr ""
+
+#: includes/tax-year.php:20
+msgid "Add or remove items"
+msgstr ""
+
+#: includes/tax-year.php:21
+msgid "Choose from the most used"
+msgstr ""
+
+#: includes/tax-year.php:22
+msgid "Popular Items"
+msgstr ""
+
+#: includes/tax-year.php:23
+msgid "Search Items"
+msgstr ""
+
+#: includes/tax-year.php:24
+msgid "Not Found"
+msgstr ""
+
+#: includes/tax-year.php:25
+msgid "No items"
+msgstr ""
+
+#: includes/tax-year.php:31
+msgctxt "Taxonomy slug"
+msgid "Year"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Website showcase"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Comunidade Portuguesa de WordPress, Marco Pereirinha,"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://wp-portugal.com"
+msgstr ""
