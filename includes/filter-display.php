@@ -11,12 +11,12 @@ function display_filters() {
 	$current_taxonomy = get_query_var( 'taxonomy' );
 	$current_term = get_query_var( 'term' );
 
-	if ( is_post_type_archive( 'cpwp_showcase' ) || in_array( $current_taxonomy, $cpwp_showcase_taxonomies ) ) {
+	if ( is_post_type_archive( 'cpwp_showcase' ) || in_array( $current_taxonomy, $cpwp_showcase_taxonomies, true ) ) {
 		?>
 		<form id="filter-showcase" class="filter-showcase" method="get">
 
 			<?php do_action( 'cpwp_showcase_filter', $current_term ); ?>
-			
+
 			<input type="submit" value="<?php esc_html_e( 'Filter', 'cpwp_showcase' ); ?>" />
 
 		</form>

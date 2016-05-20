@@ -46,10 +46,10 @@ function custom_post_type() {
 	);
 
 	$rewrite = array(
-		'slug'			=> 'showcase',
-		'with_front'	=> true,
-		'pages'			=> true,
-		'feeds'			=> true,
+		'slug'       => 'showcase',
+		'with_front' => true,
+		'pages'      => true,
+		'feeds'      => true,
 	);
 
 	$args = array(
@@ -70,7 +70,7 @@ function custom_post_type() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-		'rewrite'				=> $rewrite,
+		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
 	);
 	register_post_type( 'cpwp_showcase', $args );
