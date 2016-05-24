@@ -12,7 +12,7 @@ function display_filters( $query ) {
 	$cpwp_showcase_taxonomies = get_object_taxonomies( 'cpwp_showcase' );
 	$current_taxonomy = get_query_var( 'taxonomy' );
 
-	if ( $query->is_main_query() && is_post_type_archive( 'cpwp_showcase' ) || in_array( $current_taxonomy, $cpwp_showcase_taxonomies, true ) ) {
+	if ( $query->is_main_query() && ( is_post_type_archive( 'cpwp_showcase' ) || in_array( $current_taxonomy, $cpwp_showcase_taxonomies, true ) ) ) {
 		?>
 		<form id="filter-showcase" class="filter-showcase" method="get">
 

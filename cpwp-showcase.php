@@ -3,7 +3,7 @@
  * Plugin Name: Showcase
  * Description: Website showcase
  * Version: 0.1
- * Author: Comunidade Portuguesa de WordPress, Marco Pereirinha,
+ * Author: Comunidade Portuguesa de WordPress, Marco Pereirinha, Ricardo Correia
  * Author URI: http://wp-portugal.com
  * Text Domain: cpwp_showcase
  * Domain Path: /languages
