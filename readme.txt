@@ -1,5 +1,5 @@
 === Website showcase ===
-Contributors: wpportugal, pereirinha
+Contributors: wpportugal, pereirinha, ricardocorreia
 Tags: Showcase, Website
 Requires at least: 4.5.2
 Tested up to: 4.5.2
